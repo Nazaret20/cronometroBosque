@@ -91,5 +91,5 @@ function sumarMinutos(minutosPulsados) {
     const total = localStorage.getItem('total')
     //¿Cuántos minutos llevo más el tiempo nuevo?
     const minutosSumados = parseInt(total) + parseInt(minutosPulsados)
-    localStorage.setItem('total', minutosSumados)
+    localStorage.setItem('total', parseInt(minutosSumados))
 }
