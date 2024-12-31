@@ -72,7 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function calcularTotalMinutos() {
-        const total = localStorage.getItem('total') || 0
+        const total = localStorage.getItem('total')
+
+        if(!total) {
+            localStorage.setItem('total', 0);
+            total = 0;
+        }
         
         if(total > 0) {
             const minutosTotales = document.querySelector('#minutosTotales')
