@@ -12,63 +12,99 @@ html {
 
 body {
     background-image: url(../images/fondo2.jpg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
-}
-
-main {
-    width: 90%;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+header {
+    margin: 4rem 0;
 }
 
 h1 {
     font-family: "Alegreya Sans SC", serif;
-    font-size: 10rem;
-    margin-top: 4rem;
+    font-size: 8rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-section {
-    width: 50%;
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-section p {
-    font-family: "Alegreya Sans SC", serif;
-    font-weight: bold;
-    font-size: 10rem;
-    text-align: center;
-}
-
-
-.botonesMinutos {
+main {
     width: 100%;
-    gap: 2rem;
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
-button {
-    width: 8rem;
-    height: 4rem;
-    font-size: 1.8rem;
+div {
+    width: 45rem;
+    padding: 4rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+#cronometro {
     font-family: "Alegreya Sans SC", serif;
-    font-weight: bolder;
-    background: rgba(255, 255, 255, 0.13);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.6px);
-    -webkit-backdrop-filter: blur(5.6px);
-    border: 1px solid rgba(255, 255, 255, 0.19);
+    font-size: 12rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #boton {
-    width: 15rem;
+    width: 20rem;
+    height: 5rem;
+    font-family: "Alegreya Sans SC", serif;
+    font-size: 2.2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#boton:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.botonesMinutos {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.botonesMinutos button {
+    width: 7rem;
+    height: 4rem;
+    font-family: "Alegreya Sans SC", serif;
+    font-size: 1.8rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botonesMinutos button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
