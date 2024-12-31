@@ -1,8 +1,35 @@
 const botonEmpezar = document.querySelector('#boton');
 const cronometro = document.querySelector('#cronometro'); 
+const boton10 = document.querySelector('#boton10')
+const boton20 = document.querySelector('#boton20')
+const boton30 = document.querySelector('#boton30')
+const boton40 = document.querySelector('#boton40')
 let intervalo; 
-const minutos = 30
+let minutos = 30
 cronometro.innerHTML = `${minutos}:00`
+
+boton10.addEventListener('click', () => {
+    elegirMinutos(10)
+})
+
+boton20.addEventListener('click', () => {
+    elegirMinutos(20)
+})
+boton30.addEventListener('click', () => {
+    elegirMinutos(30)
+})
+boton40.addEventListener('click', () => {
+    elegirMinutos(40)
+})
+
+function elegirMinutos(minutosElegidos) {
+    if (intervalo) {
+        clearInterval(intervalo);
+    }
+    minutos = minutosElegidos
+    cronometro.innerHTML = `${minutos}:00`
+}
+
 
 botonEmpezar.addEventListener("click", () => {
     if (intervalo) {

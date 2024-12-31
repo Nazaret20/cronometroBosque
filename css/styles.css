@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,100&family=Cormorant+Infant:wght@500&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -9,22 +11,64 @@ html {
 }
 
 body {
-    background-color: cadetblue;
+    background-image: url(../images/fondo2.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;  
+}
+
+main {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
+h1 {
+    font-family: "Alegreya Sans SC", serif;
+    font-size: 10rem;
+    margin-top: 4rem;
+}
 
 section {
-    margin-top: 10rem;
+    width: 50%;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 section p {
-    font-size: 8rem;
+    font-family: "Alegreya Sans SC", serif;
+    font-weight: bold;
+    font-size: 10rem;
+    text-align: center;
 }
 
 
+.botonesMinutos {
+    width: 100%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+    width: 8rem;
+    height: 4rem;
+    font-size: 1.8rem;
+    font-family: "Alegreya Sans SC", serif;
+    font-weight: bolder;
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+#boton {
+    width: 15rem;
+}
