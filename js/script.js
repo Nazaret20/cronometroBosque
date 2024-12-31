@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     calcularTotalMinutos()
     const botonEmpezar = document.querySelector('#boton');
     const cronometro = document.querySelector('#cronometro');
-    const boton05 = document.querySelector('#boton05')
     const boton30 = document.querySelector('#boton30')
     const boton45 = document.querySelector('#boton45')
     const boton60 = document.querySelector('#boton60')
@@ -11,9 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let botonPulsado;
     cronometro.innerHTML = `${minutos}:00`
 
-    boton05.addEventListener('click', () => {
-        elegirMinutos(5)
-    })
     boton30.addEventListener('click', () => {
         elegirMinutos(30)
     })
@@ -32,8 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(intervalo);
         }
         minutos = minutosElegidos
-        cronometro.innerHTML = `${minutos}`
-        //cronometro.innerHTML = `${minutos}:00`
+        cronometro.innerHTML = `${minutos}:00`
     }
 
 
@@ -41,8 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (intervalo) {
             clearInterval(intervalo);
         }
-        contador = minutos;
-        //contador = minutos * 60;
+        contador = minutos * 60;
         intervalo = setInterval(cuentaAtras, 1000); // 1 segundo = 1000 milisegundos
     });
 
