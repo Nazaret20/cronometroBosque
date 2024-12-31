@@ -72,16 +72,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function calcularTotalMinutos() {
-        const total = localStorage.getItem('total')
-
+        let total = localStorage.getItem('total');
+        
         if(!total || isNaN(total)) {
-            localStorage.setItem('total', 0);
-            total = 0;
+            localStorage.setItem('total', '0');
+            total = '0';
         }
         
-        if(total > 0) {
-            const minutosTotales = document.querySelector('#minutosTotales')
-            minutosTotales.innerHTML = `En total llevas ${total} minutos 🎉`
+        const totalNum = parseInt(total);
+        
+        if(totalNum > 0) {
+            const minutosTotales = document.querySelector('#minutosTotales');
+            minutosTotales.innerHTML = `En total llevas ${totalNum} minutos 🎉`;
         }
     }
 })
