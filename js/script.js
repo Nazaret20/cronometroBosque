@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    calcularTotalMinutos()
     const botonEmpezar = document.querySelector('#boton');
     const cronometro = document.querySelector('#cronometro');
     const boton05 = document.querySelector('#boton05')
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         minutos = minutosElegidos
         cronometro.innerHTML = `${minutos}`
+        //cronometro.innerHTML = `${minutos}:00`
     }
 
 
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(intervalo);
         }
         contador = minutos;
+        //contador = minutos * 60;
         intervalo = setInterval(cuentaAtras, 1000); // 1 segundo = 1000 milisegundos
     });
 
@@ -83,6 +86,5 @@ function sumarMinutos(minutosPulsados) {
     const total = localStorage.getItem('total')
     //¿Cuántos minutos llevo más el tiempo nuevo?
     const minutosSumados = parseInt(total) + parseInt(minutosPulsados)
-    console.log("minutos: ", minutosSumados)
     localStorage.setItem('total', minutosSumados)
 }
