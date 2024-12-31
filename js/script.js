@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function calcularTotalMinutos() {
         const total = localStorage.getItem('total')
 
-        if(!total) {
+        if(!total || isNaN(total)) {
             localStorage.setItem('total', 0);
             total = 0;
         }
