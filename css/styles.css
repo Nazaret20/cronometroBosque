@@ -32,9 +32,7 @@ h1 {
 }
 
 main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    width: 90%;
 }
 
 div {
@@ -48,6 +46,7 @@ div {
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    margin: 0 auto;
 }
 
 section {
@@ -108,3 +107,15 @@ section {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+.total {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 6rem;
+}
+    .total p {
+        font-size: 2rem;
+        color: white;
+        font-family: "Alegreya Sans SC", serif;
+        text-align: center;
+    }
