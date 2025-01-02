@@ -1,121 +1,237 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,100&family=Cormorant+Infant:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    background-image: url(../assets/images/fondo2.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
-    margin: 4rem 0;
+  width: 100%;
+  height: 30rem;
+  background-image: url(../assets/images/cuadro.jpg);
+  background-size: cover;
+  position: relative;
 }
 
-h1 {
-    font-family: "Alegreya Sans SC", serif;
-    font-size: 8rem;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.emoji {
+  position: absolute;
+  font-size: 8rem;
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  top: 24rem;
+  left: 20vw;
+  padding: 0 2rem 1rem 2rem;
 }
 
 main {
-    width: 90%;
+  width: 100rem;
+  margin: 0 auto;
+  max-width: 80rem;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
 }
 
-div {
-    width: 45rem;
-    padding: 4rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    margin: 0 auto;
+.titulo {
+  font-size: 4rem;
+  color: #000000;
+  font-family: "Libre Baskerville", serif;
+  border-bottom: 1px solid rgb(207, 207, 207);
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
+.introduccion {
+  font-family: "Inter", serif;
+  font-size: 1.6rem;
+  margin-top: 3rem;
+  border-left: 3px solid black;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.container-contador {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+.total {
+  height: 37.5rem;
+  margin: 0 auto;
+  padding-top: 6rem;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+ul {
+  width: 35rem;
+}
+
+li {
+  list-style: none;
+  font-size: 1.6rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-family: "Inter", serif;
+}
+
+.total p {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  font-family: "Inter", serif;
+  text-align: center;
+  padding-top: 8.5rem;
+}
+
+.container-reloj {
+  width: 45rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin: 0 auto;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+.tiempo-y-boton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 #cronometro {
-    font-family: "Alegreya Sans SC", serif;
-    font-size: 12rem;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: "Inter", serif;
+  font-size: 12rem;
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 #boton {
-    width: 20rem;
-    height: 5rem;
-    font-family: "Alegreya Sans SC", serif;
-    font-size: 2.2rem;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 25px;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  width: 20rem;
+  height: 5rem;
+  font-family: "Inter", serif;
+  font-size: 2.2rem;
+  background: rgba(112, 112, 112, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #boton:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .botonesMinutos {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .botonesMinutos button {
-    width: 7rem;
-    height: 4rem;
-    font-family: "Alegreya Sans SC", serif;
-    font-size: 1.8rem;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  width: 8.5rem;
+  height: 4rem;
+  font-family: "Inter", serif;
+  font-size: 1.8rem;
+  background: rgba(112, 112, 112, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .botonesMinutos button:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.total {
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 6rem;
+footer {
+  height: 10rem;
 }
-    .total p {
-        font-size: 2rem;
-        color: white;
-        font-family: "Alegreya Sans SC", serif;
-        text-align: center;
-    }
+
+@media screen and (max-width: 900px) {
+  main {
+    width: 90%;
+    min-width: 20rem;
+    max-width: 60rem;
+  }
+
+  .container-contador {
+    gap: 5rem;
+    flex-direction: column-reverse;
+  }
+
+  .total {
+    width: 45rem;
+  }
+
+  li {
+    width: 45rem;
+    margin: 0 auto;
+  }
+
+  .container-reloj {
+    min-width: 45rem;
+  }
+
+  .botonesMinutos {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    row-gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    width: 40rem;
+  }
+
+  #cronometro {
+    font-size: 9rem;
+  }
+
+  .container-reloj {
+    width: 20rem;
+    min-width: 35rem;
+  }
+
+  .total {
+    width: 20rem;
+    min-width: 35rem;
+  }
+
+  li {
+    width: 30rem;
+    list-style: none;
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  #boton {
+    font-size: 1.9rem;
+    width: 16rem;
+  }
+}

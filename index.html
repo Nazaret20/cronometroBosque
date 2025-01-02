@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" />
     <script src="./js/script.js" defer></script>
-</head>
-<body>
-    <header>
-        <h1>El bosque</h1>
-    </header>
+  </head>
+  <body>
+    <header></header>
 
     <main>
-        <div class="container">
-            <section class="timer">
-                <p id="cronometro">00:00</p>
-                <button id="boton">Empezar</button>
-            </section>
-        
-            <section class="botonesMinutos">
-                <!-- <button id="boton05">00:05</button> -->
-                <button id="boton30">30:00</button>
-                <button id="boton45">45:00</button>
-                <button id="boton60">60:00</button>
-            </section>
-        </div>
-
+      <p class="emoji">⏱️</p>
+      <p class="titulo">El bosque</p>
+      <p class="introduccion">
+        Un cronómetro cuenta atrás para gestionar y visualizar el tiempo
+        empleado.
+      </p>
+      <section class="container-contador">
         <section class="total">
-            <p id="minutosTotales"></p>
+          <ul>
+            <li>¡Has elegido 15:00 minutos!</li>
+            <li>¡Has elegido 30:00 minutos!</li>
+            <li>¡Has elegido 45:00 minutos!</li>
+            <li>¡Has elegido 60:00 minutos!</li>
+          </ul>
+          <p id="minutosTotales">En total llevas 2:50 horas 🎉</p>
         </section>
-    </main>
 
-</body>
+        <div class="container-reloj">
+          <section class="tiempo-y-boton">
+            <p id="cronometro">30:00</p>
+            <button id="boton">Empezar</button>
+          </section>
+
+          <section class="botonesMinutos">
+            <!-- <button id="boton05">00:05</button> -->
+            <button id="boton15">15:00</button>
+            <button id="boton30">30:00</button>
+            <button id="boton45">45:00</button>
+            <button id="boton60">60:00</button>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
 </html>
